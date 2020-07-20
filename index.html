@@ -30,10 +30,10 @@
 <body>
 
 <!--Navbar-->
-<nav class="navbar hamburguer">
+<header class="navbar hamburguer">
 
   <!-- Navbar brand -->
-  <a class="logo" href="/"><img src="img/Logo_Cabret__Asociados.png" alt=""></a>
+  <div class="logo" href="/"><img src="img/Logo_Cabret__Asociados.png" alt=""></div>
 
   <!-- Collapse button -->
   <button class="navbar-toggler third-button " type="button" data-toggle="collapse" data-target="#navbarSupportedContent22"
@@ -64,35 +64,81 @@
   </div>
   <!-- Collapsible content -->
 
-</nav>
+</header>
 <!--/.Navbar-->
   <!-- Navigation -->
   
-  <div class="container">
-    <nav class="navbar deskt navbar-light bg-light static-top">
-    
-      <a class="logo" href="/"><img src="img/Logo_Cabret__Asociados.png" alt="logo_cya"></a>
+
+  <header class="container deskt">
+    <div class="header">
+
       
-      <ul class="list-inline mb-2">
-        <li class="list-inline-item">
-          <a href="#">Inicio</a>
-        </li>
-        <li class="list-inline-item">&sdot;</li>
-        <li class="list-inline-item">
-          <a href="#">Quienes Somos</a>
-        </li>
-        <li class="list-inline-item">&sdot;</li>
-        <li class="list-inline-item">
-          <a href="#servicios">Servicios</a>
-        </li>
-        <li class="list-inline-item">&sdot;</li>
-        <li class="list-inline-item">
-          <a href="#contacto">Contacto</a>
-        </li>
-      </ul>
-    </nav>
-    
-  </div>
+      <div class="logo">
+        <img src="img/Logo_Cabret__Asociados.png" alt="logo_cya">
+      </div>
+
+
+      <div class="indicadores">
+        <ul class="list-inline d-flex justify-content-around">
+          <li class="list-inline-item">
+            <span>UF: <p class="indicador"></p></span>
+          </li>
+
+          <li class="list-inline-item">
+            <span>UTM: <p class="indicador""></p></span>
+          </li>
+
+          <li class="list-inline-item">
+              <span>Dolar: <p class="indicador"></p></span>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="navegacion">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Inicio</a>
+          </li>
+          <li class="list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#">Quienes Somos</a>
+          </li>
+          <li class="list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#servicios">Servicios</a>
+          </li>
+          <li class="list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      
+
+
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- Masthead -->
@@ -315,6 +361,8 @@
   </footer>
 
 
+  <!-- extra js -->
+  <script src="/js/indicadoreseconomicos.js"></script>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

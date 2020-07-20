@@ -24,29 +24,7 @@ h6 {
   font-weight: 700;
 }
 
-header.masthead {
-  position: relative;
-  background-color: #343a40;
-  background: url("../img/Concepcion.jpg") no-repeat center center;
-  background-size: cover;
-  background-position: center center;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
 
-header.masthead .overlay {
-  position: absolute;
-  background-color: #757575;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.3;
-}
-
-header.masthead h1 {
-  font-size: 2rem;
-}
 
 
 /*Boostrap carousel*/
@@ -66,16 +44,66 @@ header.masthead h1 {
 }
 
 
+.header{
 
-.logo
+  display: flex;
+  width: 100%;
+  padding: 10px 10px;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+ 
+}
+
+
+.header .logo
 {
 
-  width: 18rem;
-  max-width: 40%;
+  flex: 2;
   
 }
 
-nav.navbar.hamburguer
+.indicadores{
+
+
+  flex: 3;
+  padding: 0 40px;
+
+  
+
+}
+
+
+.indicadores span{
+
+  
+  color: #007bff;
+
+}
+
+.indicadores p{
+
+
+  color: #038514;
+  display: inline;
+
+
+}
+
+.navegacion{
+
+  flex: 4;
+
+
+}
+
+  
+
+
+
+
+
+header.navbar.hamburguer
 {
 
   display: flex;
@@ -83,15 +111,22 @@ nav.navbar.hamburguer
   
 }
 
-nav.navbar.hamburguer span
+header.navbar.hamburguer span
 {
 
   background-color: #007bff;;
   
 }
 
+header.hamburguer .logo
+{
 
-nav.navbar.deskt
+  width: 200px;
+
+}
+
+
+header.deskt
 {
   
   display: none;
@@ -107,12 +142,12 @@ nav.navbar.deskt
   header.masthead h1 {
     font-size: 3rem;
   }
-  nav.navbar.hamburguer
+  header.navbar.hamburguer
   {
     display: none;
   }
   
-  nav.navbar.deskt
+  header.deskt
   {
     display: flex;
   }
