@@ -9,36 +9,48 @@ const fechaHoy = new Date()
 
 
 
-function formarNodoIndicadores(){
+fetch(`${urlAPIindicadores}`)
+  .then(response => response.json())
+  .then(({uf, utm, dolar}) => 
+  {
+    const arr = []
+    arr.push(uf)
+    arr.push(utm)
+    arr.push(dolar)
+    //console.log(arr)
 
-    function datosIndicador(indicador){
-        
-        let request = new XMLHttpRequest();
-        request.open('GET', `${urlAPIindicadores}/${indicador}/${fechaHoy.getDate()}-${1+fechaHoy.getMonth()}-${fechaHoy.getFullYear()}`);
-        request.responseType = 'json';
-        request.send();
-        
-        return request
-    
-    }
+    //arr.forEach(ele=>{console.log(ele.valor)})
+
+    actualizarIndicadores(arr)
 
 
-    
-    let jsonIndicadores = []
-    
-    jsonIndicadores = indicadores.forEach(element => datosIndicador(element));
-    
 
-    
-    //if (datosIndicadores() === null) return null
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+  });
+
+// fetch('https://mindicador.cl/api')
+//   .then(response => {
+
+
+//     console.log(response.ok)
+//     //console.log(Object.getPrototypeOf(response))
+//     //console.log(response.json())
+//     return response.json()
+
+//   }).then(response => {console.log(console.log(response))})
+
+  
+  
+
+function actualizarIndicadores(indicadores)
+{
+
+  let etiquetasIndicadores = document.getElementsByClassName('indicador')
+
+  indicadores.forEach(({valor}, index)=> etiquetasIndicadores[index].innerHTML = `$${valor}`)
+
+
 }
